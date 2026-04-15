@@ -73,6 +73,7 @@ public class TodoView {
 
         //todoService.addTodo 호출
         System.out.println("저장 완료!");
+        todoService.addTodo(date, time, task);
     }
 
     private void updateTodo() {
@@ -97,6 +98,7 @@ public class TodoView {
 
         // todoService.updateTodo 호출
         System.out.println("수정 완료!");
+        todoService.updateTodo(date, index, time, task);
     }
 
     private void deleteTodo() {
@@ -115,6 +117,7 @@ public class TodoView {
 
         // todoService.deleteTodo 호출
         System.out.println("삭제 완료!");
+        todoService.deleteTodo(date, index);
     }
 
     private void completeTodo() {
@@ -125,6 +128,7 @@ public class TodoView {
         printList(date, list);
 
         if (list == null || list.isEmpty()) {
+            System.out.println("날짜가 비어있습니다.");
             return;
         }
 
@@ -133,6 +137,7 @@ public class TodoView {
 
         // todoService.completeTodo 호출
         System.out.println("완료 처리 완료!");
+        todoService.completeTodo(date, index);
     }
 
     private void printByDate() {
