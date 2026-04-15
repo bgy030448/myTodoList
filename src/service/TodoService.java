@@ -10,7 +10,7 @@ public interface TodoService {
 
     List<Todo> getTodosByDate(String date);
 
-    Map<String, List<Todo>> getAllTodos();
+    public Map<String, List<Todo>> getAllTodos();
 
     void updateTodo(String date, int index, String time, String task);
 
